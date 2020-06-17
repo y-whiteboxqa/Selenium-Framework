@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ebank Automation Test Suite" parallel="tests">
+  
+  <listeners>
+  <listener class-name="com.ebank.extentReportListener.ExtentReport"/>
+  </listeners>
+  
+  <test name="Ebank Chrome Test">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.ebank.testPages.NewCustomerPageTest"/>
+      <class name="com.ebank.testPages.LoginPageTest"/>
+      <class name="com.ebank.testPages.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Ebank Firefox Test">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.ebank.testPages.NewCustomerPageTest"/>
+      <class name="com.ebank.testPages.LoginPageTest"/>
+      <class name="com.ebank.testPages.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
